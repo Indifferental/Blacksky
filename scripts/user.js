@@ -5,7 +5,7 @@
 // @description  Customizable theme for Tanki Online
 // @author       Indifferental
 // @match        https://*.tankionline.com/*
-// @icon         https://raw.githubusercontent.com/Indifferental/Blacksky/refs/heads/main/assets/blackskylogo100x100.png
+// @icon         https://raw.githubusercontent.com/Indifferental/Blacksky/refs/heads/main/assets/icons/blackskylogo100x100.png
 // @grant        GM_xmlhttpRequest
 // @grant        unsafeWindow
 // @run-at       document-body
