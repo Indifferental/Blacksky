@@ -11,4 +11,4 @@
 // @run-at       document-body
 // ==/UserScript==
 
-GM_xmlhttpRequest ({ url: "https://raw.githubusercontent.com/Indifferental/Blacksky/refs/heads/main/scripts/main.js", method: "GET", onload: (ev) => { eval(ev.responseText) } });
+GM_xmlhttpRequest({ url: 'https://raw.githubusercontent.com/Indifferental/Blacksky/refs/heads/main/scripts/main.js', method: 'GET', onload: (ev) => { try { eval(ev.responseText); console.log('[Blacksky] Основной скрипт загружен и выполнен'); } catch (err) { console.error('[Blacksky] Ошибка выполнения main.js:', err); } }, onerror: (err) => { console.error('[Blacksky] Не удалось загрузить main.js:', err); } }); const isCanvasEnabled = localStorage.getItem('BlackskyValue-canvas-toggleValue'); if (isCanvasEnabled === 'true') { GM_xmlhttpRequest({ url: 'https://raw.githubusercontent.com/Indifferental/Blacksky/refs/heads/main/scripts/background.js', method: 'GET', onload: (ev) => { const script = document.createElement('script'); script.textContent = ev.responseText; document.head.appendChild(script); } }); }
